@@ -1,14 +1,13 @@
 import React from "react";
 
 const AsyncParagraph = ({ loadData }) => {
-  let [test, setTest] = React.useState("");
+  let [key, setKey] = React.useState("");
   React.useEffect(() => {
     loadData().then((data) => {
-      setTest(data);
+      setKey(data);
     });
-    console.log("AsyncParagraph");
   }, []);
-  return <p>{test}</p>;
+  return <p>{key}</p>;
 };
 function Question1() {
   return (
